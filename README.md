@@ -1,7 +1,5 @@
 # CSCI571 - Web Technologies
 
----
-
 > 2020 Spring Homework
 
 | #    |                           Homework                           |              Skills               |
