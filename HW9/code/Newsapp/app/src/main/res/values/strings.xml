@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="action_search">Search</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home">Home</string>
+    <string name="headlines">Headlines</string>
+    <string name="trending">Trending</string>
+    <string name="bookmarks">Bookmarks</string>
+
+    <!--  progress bar  -->
+    <string name="progressBarText">Fetching News</string>
+
+    <string name="homeNewsAPI">http://shuqixiao-backend.us-east-2.elasticbeanstalk.com/guardian</string>
+    <string name="sectionAPI">http://shuqixiao-backend.us-east-2.elasticbeanstalk.com/guardian?section=</string>
+    <string name="articleAPI">http://shuqixiao-backend.us-east-2.elasticbeanstalk.com/article?id=</string>
+    <string name="searchAPI">http://shuqixiao-backend.us-east-2.elasticbeanstalk.com/search?q=</string>
+
+    <string name="getPermissionPositive">ALLOW</string>
+    <string name="getPermissionNegative">DENY</string>
+    <string name="openWeatherKEY">f74c746216a3a8bee9a151210f67d53a</string>
+    <string name="scaleOfTemperature">&#160;°C</string>
+
+    <string name="noBookmarkedArticles">No Bookmarked Articles</string>
+
+    <string name="searchToolbar">Search Results for&#160;</string>
+
+    <!-- Strings used for fragments for trending -->
+    <string name="enter_search_term">Enter Search Term :</string>
+    <string name="CoronaVirus">CoronaVirus</string>
+</resources>

@@ -1,0 +1,32 @@
+.world {
+    background: #7C4EFE;
+    color: white;
+}
+.politics {
+    background: #419488;
+    color: white;
+}
+.business {
+    background: #4696EC;
+    color: white;
+}
+.technology {
+    background: #CEDB39;
+    color: black;
+}
+.sports {
+    background: #F6C244;
+    color: black;
+}
+.other {
+    background: #6E757C;
+    color: white;
+}
+.Guardian {
+    background: #14284A;
+    color: white;
+}
+.NYTimes {
+    background: #DCDDDC;
+    color: black;
+}

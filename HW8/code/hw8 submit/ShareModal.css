@@ -1,0 +1,25 @@
+.modal-title {
+    font-size: 20px;
+    display: block !important;
+    width: 100%;
+}
+.modal-subtitle {
+    display: block !important;
+}
+.share-button-text {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+.share-button-group {
+    text-align: center;
+    position: relative;
+}
+.share-button-group .facebook-share-button {
+    position: absolute;
+    left: 10%;
+}
+.share-button-group .email-share-button {
+    position: absolute;
+    right: 10%;
+}

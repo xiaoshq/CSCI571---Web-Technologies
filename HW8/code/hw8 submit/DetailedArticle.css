@@ -1,0 +1,76 @@
+#detailed-article-card {
+    width: 98%;
+    margin: 15px auto;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#detailed-title{
+    font-family: "Arial";
+    font-style: italic;
+}
+
+#detailed-article-widget {
+    position: relative;
+    height: 35px;
+}
+.detailed-article-date {
+    width: 50%;
+}
+.detailed-share-button-group {
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
+.detailed-bookmark-icon{
+    position: absolute;
+    top: 2px;
+    right: 2%;
+    padding: 0;
+    font-size: 24px;
+    color: #EB2D39;
+    font-weight: bold;
+}
+.detailed-bookmark-show {
+    display: block;
+}
+.detailed-bookmark-hide {
+    display: none;
+}
+
+#arrowdown {
+    float: right;
+    font-size: x-large;
+    display: none;
+}
+#arrowup {
+    float: right;
+    font-size: x-large;
+    display: none;
+}
+
+.spinner {
+    margin: 0 auto;
+    margin-top: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    color: dimgrey;
+}
+
+.ellipsis {
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-orient:vertical;
+    -moz-line-clamp: 6;
+    overflow: hidden;
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp: 6;
+}
+
+.toastMsg {
+    color: black !important;
+}

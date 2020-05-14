@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Building Query</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    </head>
+    <body style="width: 750px; margin: 0 auto; text-align: center;">
+        <h3>Enter URL for list of tallest buildings JSON File</h3>
+        <form name = "form" method="post" id="form">
+            <input type="text" name="URL" value=""/>
+            <br/><br/>
+            <input type="button" name="submit" value="Submit Query" onclick="viewJSON(this.form)"/>
+        </form>
+        <script type="text/javascript">
+            function viewJSON(file) {
+                var URL = file.URL.value;
+                if (checkInput(URL) == false) {
+                    return;
+                }
+                jsonObj = loadJSON(URL);
+            }
+
+            function checkInput(fileName) {
+                if (fileName == "") {
+                    alert("Error: Please input a file name!");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+
+            function loadJSON(url) {
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", url, false);
+                // xmlhttp.setRequestHeader("Access-Control-Allow-Origin","*");
+                // xmlhttp.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-token");
+                // xmlhttp.setRequestHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
+                xmlhttp.onreadystatechange = function() {
+                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        jsonObj = JSON.parse(xmlhttp.responseText);
+                        // Missing key Header or Header.Data will be an error
+                        if (jsonObj.Mainline.Table.Header == null || jsonObj.Mainline.Table.Header.Data == null) {
+                            alert("Error: No header in this file!");
+                            return;
+                        }
+                        // Missing rows will be an error
+                        if (jsonObj.Mainline.Table.Row == null) {
+                            alert("Error: No buildings in this file!");
+                            return;
+                        }
+                        jsonObj.onload = generateHTML(jsonObj);
+                        hWin = window.open("", "Assignment4", "height=800,width=1250");
+                        hWin.document.write(html_text);
+                        hWin.document.close();
+                    } else {
+                        console.log(xmlhttp.status);
+                        alert("Error: File not found!");
+                    }
+                }
+                xmlhttp.send();
+            }
+
+            function generateHTML(jsonObj) {
+                root = jsonObj.DocumentElement;
+                html_text = "<html><head><title>JSON Parse Result</title></head><body>";
+                html_text += "<table border='2'>";
+                headerList = jsonObj.Mainline.Table.Header.Data;
+                buildingList = jsonObj.Mainline.Table.Row; // an array of buildings
+                html_text += "<tbody>";
+                html_text += "<tr>";
+
+                // output the headers
+                headers = ["Rank", "Name", "City / Country", "Height (ft)", "Wiki Page", "Image"];
+                if (headerList != headers) { // Header Data values may be different
+                    headerList = headers;
+                }
+                for (i=0; i<headerList.length; i++) {
+                    header = headerList[i];
+                    html_text += "<th>" + header + "</th>";
+                }
+                html_text += "</tr>";
+
+                // output the values
+                for (i=0; i<buildingList.length; i++) {
+                    building = buildingList[i]; //get properties of a building (an object)
+                    html_text += "<tr>";      //start a new row of the output table
+                    var building_keys = Object.keys(building);
+                    for (j=0; j<building_keys.length; j++) {
+                        prop = building_keys[j];
+                        // the value of a tag is empty, display a blank cell
+                        if (building[prop] == null || building[prop] == "") {
+                            if (prop == "Logo") {
+                                html_text += "<td style=\"width:200; height:200\"></td>";
+                            } else {
+                                html_text += "<td></td>";
+                            }
+                            continue;
+                        }
+                        // the value of a tag is not empty
+                        if (prop == "Hubs") {
+                            var hubs = building[prop].Hub;
+                            // Hub array may contain zero value
+                            if (hubs == null || hubs.length == 0) {
+                                html_text += "<td></td>";
+                                continue;
+                            }
+                            // Hub array may contain more values
+                            html_text += "<td><ul>";
+                            html_text += "<li style=\"font-weight: bolder;\">"+hubs[0]+"</li>";
+                            for (k=1; k<hubs.length; k++) {
+                                html_text += "<li>"+hubs[k]+"</li>";
+                            }
+                            html_text += "</ul></td>";
+                        }
+                        else if (prop == "HomePage") {
+                            html_text += "<td><a href=\""+ building[prop] + "\">" + building[prop] + "</td>";
+                        }
+                        else if (prop == "Logo") {
+                            html_text += "<td><img src='"+ building[prop] +"' width='"+200+"' height='"+200+"'></td>";
+                        }
+                        else {
+                            html_text += "<td>"+ building[prop] +"</td>";
+                        }
+                    }
+                    html_text += "</tr>";
+                }
+
+                html_text += "</tbody>";
+                html_text += "</table>";
+                html_text += "</bo" + "<dy> </html>";
+            }
+        </script>
+    </body>
+</html>

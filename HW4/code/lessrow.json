@@ -1,0 +1,61 @@
+{
+  "Mainline": {
+    "Table": {
+      "Header": {
+        "Data": [
+          "Rank",
+          "Name",
+          "City / Country",
+          "Height (ft)",
+          "Wiki Page",
+          "Image"
+        ]
+      },
+      "Row": [
+          
+        {
+          "Rank": "1",
+          "Name": "Burj Khalifa",
+          "Hubs": {
+            "Hub": [
+              "Dubai",
+              "United Arab Emirates",
+              "Currently the tallest building and tallest structure in the world from 2010 onwards; tallest building completed in the 2010s."
+            ]
+          },
+          "Height": "2,717",
+          "HomePage": "https://en.wikipedia.org/wiki/Burj_Khalifa",
+          "Logo": "https://csci571.com/hw/hw4/Burj_Khalifa.jpg"
+        },
+        {
+          "Rank": "2",
+          "Name": "Shanghai Tower",
+          "Hubs": {
+            "Hub": [
+              "Shanghai",
+              "China",
+              "The tallest building in China and in East Asia and tallest twisted building."
+            ]
+          },
+          "Height": "2,073",
+          "HomePage": "https://en.wikipedia.org/wiki/Shanghai_Tower",
+          "Logo": "https://csci571.com/hw/hw4/Shanghai_tower_dec_26,_2014.jpg"
+        },
+        {
+          "Rank": "3",
+          "Name": "Abraj Al-Bait Clock Tower",
+          "Hubs": {
+            "Hub": [
+              "Mecca",
+              "Saudi Arabia",
+              "Tallest building with a clock face. Tallest in Saudi Arabia."
+            ]
+          },
+          "Height": "1,971",
+          "HomePage": "https://en.wikipedia.org/wiki/Abraj_Al_Bait",
+          "Logo": "https://csci571.com/hw/hw4/Abraj-al-Bait-Towers.JPG"
+        }
+      ]
+    }
+  }
+}

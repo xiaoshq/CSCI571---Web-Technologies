@@ -1,0 +1,82 @@
+body {
+    width: 570px;
+    height: 770px;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 467px;
+    height: 90px;
+    margin: 25px auto 0 auto;
+    border: 1px solid grey;
+    font-family: "georgia";
+    text-align: center;
+}
+.title {
+    font-size: 250%;
+    text-align: center;
+    padding-top: 12px;
+}
+.navigation_bar a{
+    text-decoration: none;
+}
+.navigation_bar span {
+	font-style: italic;
+    font-size: 60%;
+    padding: 6px;
+	color: grey;
+}
+
+.pictures {
+    height: 615px;
+    width: 570px;
+    margin: 0 auto;
+}
+.section_title {
+    margin: 0 auto;
+    font-size: 130%;
+    width: 528px;
+    height: 60px;
+}
+.section_title p {
+    margin: 0;
+    position: relative;
+    top: 35px;
+}
+.pictures_ul {
+    width: 536px;
+    height: 531px;
+    margin: 0 auto;
+    padding: 0;
+}
+.pictures_ul li {
+    float: left;
+    height: 263px;
+    width: 263px;
+    list-style-type:none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-bottom: 5px;
+}
+
+footer {
+	text-align: center;
+    margin: 0 auto;
+}
+.copyright {
+    font-size: 40%;
+    font-family: "georgia";
+    font-style: italic;
+    color: grey;
+}
+.social {
+    margin-top: 20px;
+}
+.social img {
+    height: 14px;
+    width: 14px;
+    padding: 0 4px;
+}

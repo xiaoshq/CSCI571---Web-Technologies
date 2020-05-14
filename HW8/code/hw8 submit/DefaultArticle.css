@@ -1,0 +1,67 @@
+#default-article-card {
+    width: 98%;
+    margin: 15px auto;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+/*width: 300px;*/
+/*height: 160px;*/
+#default-article-image-part {
+    max-width: 300px;
+    margin-right: 10px;
+    padding: 0;
+    border: 1px solid #EBECEB;
+    border-radius: 3px;
+    float: left;
+    text-align: center;
+}
+#default-article-image {
+    max-width: 295px;
+    max-height: 155px;
+    margin: 2px auto;
+    overflow: hidden;
+}
+#default-article-text {
+    display: inline-block;
+    width: 96%;
+    margin-left: 20px;
+}
+
+.default-article-title {
+    font-style: italic;
+}
+
+.default-article-description {
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-orient:vertical;
+    -moz-line-clamp: 3;
+    overflow: hidden;
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp: 3;
+}
+
+#default-article-widget {
+    position: relative;
+}
+#default-article-date {
+    width: 100px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+#default-article-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.spinner {
+    margin: 0 auto;
+    margin-top: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    color: dimgrey;
+}

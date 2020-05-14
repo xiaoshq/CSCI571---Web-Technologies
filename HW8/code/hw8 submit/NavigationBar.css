@@ -1,0 +1,46 @@
+#navbar {
+    background-image: linear-gradient(to right , #1A2948, #506DB1);
+    width: 100%;
+    min-width: 320px;
+}
+#search-input {
+    width: 270px;
+    padding-right: 10px;
+}
+.favorite-bookmark-icon {
+    color: white;
+}
+#favorites-bookmark-empty {
+    margin-right: 15px;
+}
+#favorites-bookmark-full {
+    margin-right: 10px;
+}
+.favorites-bookmark-show {
+    display: block;
+}
+.favorites-bookmark-hide {
+    display: none;
+}
+.react-switch {
+    margin: auto 0;
+    padding-right: 8px;
+}
+.source-name {
+    color: white;
+}
+
+.navlink {
+    color: rgba(255, 255, 255, 0.3);
+    margin-right: 15px;
+}
+.navlink:hover {
+    color: white;
+    text-decoration: none;
+}
+.selected {
+    color: white;
+}
+.search-switch, .favorites-switch, .article-switch {
+    display: none;
+}

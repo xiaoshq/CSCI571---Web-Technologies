@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/search_term_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_search_term"
+        android:includeFontPadding="true"
+        android:paddingLeft="20dp"
+        android:paddingTop="35dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/search_term_keyword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:autofillHints="true"
+        android:hint="@string/CoronaVirus"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingTop="5dp"
+        android:textColorHighlight="@color/buttonBackground"
+        android:textColorLink="@color/colorPrimary" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:paddingTop="20dp" />
+
+</LinearLayout>
